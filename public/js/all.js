@@ -15,7 +15,7 @@ $(document).ready(function (e) {
     });
     $('.event-img').hover(function () {
         $(this).siblings().animate({
-            opacity: 0.3,
+            opacity: 0.8,
             bottom: 0
         }, 500);
     }, function () {
