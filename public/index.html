@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>MyResume</title>
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/all.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="js/all.js"></script>
+  </head>
+  <body>
+    <div class="scroll-top"><i class="fas fa-arrow-up"></i></div>
+  </body>
+  <div class="nav">
+    <ul class="menu">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#skill">SKILL</a></li>
+      <li><a href="#experience">EXPERIENCE</a></li>
+      <li><a href="#event">EVENT</a></li>
+      <li><a href="#portfolio">PORTFOLIO</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <section id="about">
+      <div class="profile">
+        <div class="row">
+          <div class="col-4">
+            <div id="personal-photo" class="mb-3"><img src="img/profile-photo.jpg" alt=""/></div>
+            <div id="scoial">
+              <ul class="social-link">
+                <li class="mr-3"><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="info" class="col-8">
+            <h2 class="mb-1">何宗益 Gary</h2><span class="mb-4">目前正積極精進前端開發的能力，期望能成為一位能獨當一面的前端工程師</span>
+            <p>在大學期間首次接觸到前端的語言，包刮HTML、CSS、JavaScript等，發覺前端真的很有趣，應用的範圍也很廣泛，可以寫網頁、應用程式、遊戲等，甚至最近很紅的區塊鏈也能透過前端來開發。目前正透過自我學習的方式來加強自己在前端開發的能力，並期許自己將來能夠成為解決各式問題的前端工程師。</p>
+            <div class="row">
+              <div class="col-6">
+                <ul class="info-list">
+                  <li><span class="info-list-title">Education</span><span class="info-list-detail">國立高雄大學</span></li>
+                  <li><span class="info-list-title">Address</span><span class="info-list-detail">台灣 台南市</span></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="info-list">
+                  <li><span class="info-list-title">phone</span><span class="info-list-detail">+886 -975-118-030</span></li>
+                  <li><span class="info-list-title">Mail</span><span class="info-list-detail">g6165310@gmail.com</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skill" class="animated">
+      <div class="section-header">
+        <h2>SKILL</h2>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <div id="professional-skills">
+            <div class="skills-title">
+              <h3>PROFESSIONAL SKILLS</h3>
+            </div>
+            <div class="professional-skills-content">
+              <canvas id="myChart" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <div id="additional-skills">
+            <div class="skills-title">
+              <h3>ADDITIONAL SKILLS</h3>
+            </div>
+            <div class="additional-skills-content">
+              <div class="additional-skills-content top row">
+                <div class="col-4"> <span>Language</span></div>
+                <div class="col-4"> <span>Tool</span></div>
+                <div class="col-4"> <span>Other</span></div>
+              </div>
+              <div class="additional-skills-content bottom row">
+                <div class="col-4"> <span>中文</span><span>英文TOEIC 765</span><span>韓文(自學中)</span></div>
+                <div class="col-4"><span>Facebook AD</span><span>Google Analytics</span><span>Google AdWords</span><span>Photoshop</span></div>
+                <div class="col-4"><span>gulp</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="animated">
+      <div class="section-header">
+        <h2>EXPERIENCE</h2>
+      </div>
+      <div class="row">
+        <div class="col-10 offset-1"><span class="experience-icon"><i class="fas fa-code fa-1x"></i></span>
+          <ul class="experience-list">
+            <li class="experience-item"><span class="experience-period">08 2017 - 07 2018</span>
+              <h3>數位行銷</h3>
+              <h5>小草作,草系生活有限公司</h5>
+              <p>在草系生活有限公司，規劃Facebook、Google關鍵字廣告，與工程師討論並規劃官網前後台需求以及官網SEO優化。目前共11組關鍵字的SEO頁面出現在搜尋結果第一頁。</p>
+            </li>
+            <li class="experience-item"><span class="experience-period">02 2017 - 05 2018</span>
+              <h3>程式設計實習生</h3>
+              <h5>國泰產險</h5>
+              <p>撰寫以JAVA為主並搭配MVC架構的內部系統網頁、JAVA批次程式撰寫。根據Test Case進行國泰車險APP的內部功能測試，完成測試報告以及UX建議報告。</p>
+            </li>
+            <li class="experience-item"><span class="experience-period">10 2015 - 12 2016</span>
+              <h3>程式開發</h3>
+              <h5>產學合作案</h5>
+              <p>使用Android Studio開發一款益智問答遊戲為主軸的交友軟體。透過使用者需求訪談開始，到系統架構的分析，循序漸進地開發完成，並達到公司的合作目標。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="event" class="animated">
+      <div class="section-header">
+        <h2>EVENT</h2>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="event-img"><img src="img/event-1.jpg" alt=""/></div>
+          <div class="event-content">
+            <p>由於C語言是大學所學的第一門程式課程，為了打好程式基礎，與幾位同學一起創建C語言教室，主要為輔導與解惑學弟妹在C語言課業上遇到的困難。從活動中擔任小老師的身份，不僅讓自己有更多的學習機會，更能審視自己過去所學並融會貫通。</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="event-img"><img src="img/event-2.jpg" alt=""/></div>
+          <div class="event-content">
+            <p>藉由營隊一系列活動以及課程，讓高中生更了解資訊管理學系在學些什麼。過程中，不僅提出活動以及課程企劃，更要利用各種行銷管道進行招生，藉此完成這項活動。身為總召，面對數個部門的不同狀況和壓力，讓我學習到如何扮演好一個領導人的腳色，也讓自己有更多的機會學習如何統整、運用來自四方八方的訊息，並協調各部門的工作以及人力，讓活動的品質更好。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="mb-2 animated mb-5">
+      <div class="section-header">
+        <h2>PORTFOLIO </h2>
+      </div>
+      <div class="row slide-wrap">
+        <div class="btn pre"><i class="fas fa-angle-left"></i></div>
+        <div id="slide1" class="card">
+          <div class="card-img"><img src="img/slide-1.png" alt=""/></div>
+          <div class="card-content">
+            <h3>產學合作-TagKnowledge</h3><i class="far fa-clock"> <span class="ml-1">2015/05 - 2016/12</span></i>
+            <p>畢業專題因為是產學合作，因此與合雅行銷公司有了一年的合作機會，我們開發了一款透過遊戲來交友的Android App，而後端的部分更是利用Hadoop建立主機叢集，讓公司能輕易處理大量資料。</p>
+          </div>
+        </div>
+        <div id="slide2" class="card"> 
+          <div class="card-img"><img src="img/slide-2.png" alt=""/></div>
+          <div class="card-content">
+            <h3>趣活動</h3><i class="far fa-clock"> <span class="ml-1">2016/03 - 2016/06</span></i>
+            <p>利用文化部提供的開放資料，結合Google Map API呈現在地圖上，同時也連結了Google Calendar讓使用者可以一鍵記錄到個人的日曆當中。</p>
+          </div>
+        </div>
+        <div id="slide3" class="card"> 
+          <div class="card-img"><img src="img/slide-3.png" alt=""/></div>
+          <div class="card-content">
+            <h3>Snapost</h3><i class="far fa-clock"> <span class="ml-1">2016/10 - 2017/01</span></i>
+            <p>利用JavaScript和Firebase建立起一個模仿IG的社交網站，利用Facebook API 驗證使用者的登入，並模擬廣告主投放廣告的實作，同時利用D3.js自動生成廣告成效報表等。</p>
+          </div>
+        </div>
+        <div id="slide4" class="card"> 
+          <div class="card-img"><img src="img/slide-4.png" alt=""/></div>
+          <div class="card-content">
+            <h3>切版練習</h3><i class="far fa-clock"> <span class="ml-1">2018/03 - 2018/4</span></i>
+            <p>利用線上課程來加強自己在前端的基礎能力，並透過所學實作基本的網頁切版以及響應式功能</p>
+          </div>
+        </div>
+        <div class="btn nex"><i class="fas fa-angle-right"></i></div>
+      </div>
+    </section>
+    <div class="footer mb-3">
+      <p>Copyright © 2018 何宗益 All rights reserved</p>
+    </div>
+  </div>
+</html>

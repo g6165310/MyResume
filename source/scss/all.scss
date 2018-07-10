@@ -1,0 +1,354 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexyen.css');
+
+$color-grey:#E6E6E6;
+$color-white:#FFFFFF;
+$color-blue:#0487cc;
+$box-shadow:0 2px 5px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.11);
+$font-family: 'Oswald','cwTeXYen', sans-serif;
+
+*,*:after,*:before{
+    box-sizing: inherit;
+    letter-spacing: 0.5px;
+}
+a,a:hover{
+    text-decoration: none;
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    background-color: $color-grey;
+}
+h2{
+    display: inline-block;
+    font-size: 40px;
+    color: $color-blue;
+    font-family: $font-family;
+    margin-bottom: 80px;
+}
+.scroll-top{
+    position: fixed;
+    height: 45px;
+    width: 45px;
+    bottom: 50px;
+    right:50px;
+    border-radius:50%;
+    background-color: $color-white;
+    color:$color-blue;
+    display: none;
+    text-align: center;
+    padding: 14px;
+    cursor: pointer;
+    &:hover{
+        box-shadow:$box-shadow;
+    }
+    &:before{
+        content:'Top';
+        font-family: $font-family;
+        position: absolute;
+        top:-30px;
+        left:10px;
+        font-size: 14px;
+        color:$color-blue;
+        font-weight: bold;
+    }
+}
+
+.nav{
+    position: fixed;
+    top:250px;
+    background-color: transparent;
+    color: $color-blue;
+    font-family: $font-family;
+    padding: 20px;
+    li{
+        margin-bottom: 20px;
+        width: 120px;
+        text-align: center;
+        padding: 0 5px;
+        font-size: 20px;
+        &:hover{
+        border-left: 5px solid $color-blue;
+        border-right: 5px solid $color-blue;
+        }
+    } 
+}
+
+section{
+    background-color: $color-grey;
+    margin-top: 50px;
+    font-family: $font-family;
+    p{
+        line-height: 30px;
+    } 
+}
+#about{
+    background-color: $color-white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.11);
+}
+.profile{
+    padding: 30px;
+    span{
+        display: block;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+.social-link{
+    text-align: center;
+    li{
+        display: inline-block;
+    }
+    a{
+        color: #000;
+        opacity: 0.5;
+    }
+}
+#info{
+    p{
+        margin-bottom: 1.75rem;
+    }
+}
+.info-list{
+    li{
+        margin-bottom: 1rem;
+    }
+    span{
+        display: inline-block;
+    }
+}
+.info-list-title{
+    width: 40%;
+    font-weight: 700;
+    font-family: $font-family;
+    font-size: 16px;
+}
+#personal-photo{ 
+    
+    text-align: center;
+    img{
+        box-shadow: $box-shadow;
+        height: 50%;
+        width: 50%;
+    }
+}
+/* Skill section */
+#skill{
+    h3{
+        display: inline-block;
+        background-color: $color-blue;
+        color:$color-white;
+        padding: 18px 28px;
+        font-size: 20px;
+        position: relative;
+        font-family: $font-family;
+        top:-32px;
+        box-shadow:$box-shadow;
+    }
+}
+.professional-skills{
+    position: absoulte;
+}
+.skills-title{
+    text-align: center;
+}
+.additional-skills-content.top{
+    text-align: center;
+    color: $color-blue;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+.additional-skills-content.bottom{
+    text-align: center;
+    font-size: 20px;
+    span{
+        display: block;
+        margin-bottom: 12px;
+        border-left: 2px solid $color-blue;
+    }
+}
+.section-header{
+    text-align: center;
+}
+#professional-skills, #additional-skills{
+    background-color: $color-white;
+    padding: 0px 30px 30px;
+    box-shadow:$box-shadow;
+    height: 350px;
+}
+.experience-icon{
+    margin-left: 165px;
+    padding: 8px;
+    background-color: $color-white;
+    i{
+        color:#757575
+    }
+}
+.experience-list{
+    padding-top: 50px;
+    padding-left: 25px;
+    margin-left: 180px;
+    border-left: 5px solid #ffffff;
+}
+.experience-item{
+    position: relative;
+    padding: 30px;
+    background-color: $color-white;
+    box-shadow:$box-shadow;
+    margin-bottom: 45px;
+    h3{
+        color:$color-blue;
+    }
+    h5{
+        color:#757575;
+        margin-bottom: 1rem;
+    }
+    &:before{
+        content:'';
+        position: absolute;
+        background-color: $color-blue;
+        height: 14px;
+        width: 14px;
+        border-radius:50%;
+        left:-34px;
+        top:15px;
+        box-shadow:$box-shadow;
+    }
+}
+.experience-period{
+    display: inline-block;
+    background-color: $color-blue;
+    width: 180px;
+    padding: 10px 0px;
+    text-align: center;
+    color:$color-white;
+    box-shadow:$box-shadow;
+    position: absolute;
+    left:-35%;
+    margin-top: -30px;
+}
+.event-img{
+    position: relative;
+    img{
+        height: 405px;
+    }
+}
+.event-content{
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    font-weight: 1000;
+    color:white;
+    pointer-events: none;
+    width: calc(100% - 30px);
+    padding: 0 5px;
+    font-size: 18px;
+    height: 50%;
+    bottom: 0;
+    opacity:0;
+}
+.portfolio-content{
+    background-color: $color-white;
+    height: 500px;
+    margin-bottom: 10px;
+    img{
+        width: 100%;
+        height: 50%;
+        background-size: cover;
+    }
+    i{
+        margin-right: 10px;
+    }
+}
+.portfolio-description{
+    padding: 30px 25px;
+}
+
+.slide-wrap{
+    position: relative;
+    height: 750px;
+}
+.card{
+    position: absolute;
+    width: 400px;
+    height: 550px;
+    top:100px;
+    left: 50%;
+    margin-left:-200px;
+    border:1px solid gray;
+    box-shadow:$box-shadow;
+    transition:all 0.5s;
+    border-radius: 0;
+}
+
+#slide1{
+    transform:translateX(0px) scale(1.5);
+    z-index: 99;
+}
+
+#slide2{
+    transform:translateX(-300px);
+    z-index: 9;
+}
+
+#slide3{
+    transform:translateX(300px);
+    z-index: 9;
+}
+#slide4{
+    transform:translateX(0px);
+    z-index: 9;
+}
+.btn{
+    z-index: 1000;
+    height: 30px;
+
+    font-size: 50px;
+    color: gray;
+    text-align: center;
+    line-height: 15px;
+    position: absolute;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.pre{
+    top:300px;
+    left: 1px;
+}
+.nex{
+    top:300px;
+    right: 1px;
+}
+.card-img{
+    img{
+        width: 400px;
+        height: 300px;
+    }
+}
+.card-content{
+    padding: 20px;
+    h3{
+        color:$color-blue;
+        margin-bottom: 1rem;
+    }
+    i{
+        margin-bottom: 0.5rem;
+    }
+}
+
+.footer{
+    text-align: center;
+}
+//animated
+.animated{
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(100px);
+}
+.fadeIn{
+    opacity:1;
+    transform: translateY(0);
+}
