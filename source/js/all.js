@@ -68,14 +68,14 @@ $(document).ready(function(e){
     })
     //pre-btn
     $('.pre').click(function(){
-        if(flag==0){
+        if(flag==3){
             $('#slide1').css("z-index",999);
             $('#slide2').css("z-index",9);
             $('#slide3').css("z-index",9);
             $('#slide4').css("z-index",9);
             $('#slide1').css("transform",'translateX(0px) scale(1.5)');
-            $('#slide2').css("transform",'translateX(-300px) scale(1)');
-            $('#slide3').css("transform",'translateX(300px)');
+            $('#slide2').css("transform",'translateX(-300px)');
+            $('#slide3').css("transform",'translateX(300px) scale(1)');
             $('#slide4').css("transform",'translateX(0px)');
             flag=1;
         }else if(flag==1){
@@ -87,8 +87,8 @@ $(document).ready(function(e){
             $('#slide4').css("transform",'translateX(-300px)');
             $('#slide3').css("transform",'translateX(0px)');
             $('#slide1').css("transform",'translateX(300px) scale(1)');
-            flag=3;
-        }else if(flag==3){
+            flag=0;
+        }else if(flag==0){
             $('#slide4').css("z-index",999);
             $('#slide3').css("z-index",9);
             $('#slide1').css("z-index",9);
@@ -107,7 +107,7 @@ $(document).ready(function(e){
             $('#slide1').css("transform",'translateX(-300px)');
             $('#slide2').css("transform",'translateX(0px)');
             $('#slide4').css("transform",'translateX(300px) scale(1)');
-            flag=0;
+            flag=3;
         }
     })
     $(window).scroll(function(){
