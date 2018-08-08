@@ -27,7 +27,6 @@ $(document).ready(function (e) {
     var pre_flag = 1;
     //btn-nex
     $('.nex').click(function () {
-        console.log(nex_flag, pre_flag);
         if (nex_flag == 0) {
             $('#slide1').css("z-index", 999);
             $('#slide2').css("z-index", 9);
@@ -94,11 +93,9 @@ $(document).ready(function (e) {
             nex_flag = 0;
             pre_flag = 5;
         }
-        console.log(nex_flag, pre_flag);
     });
     //pre-btn
     $('.pre').click(function () {
-        console.log(nex_flag, pre_flag);
         if (pre_flag == 3) {
             $('#slide1').css("z-index", 999);
             $('#slide2').css("z-index", 9);
@@ -165,7 +162,6 @@ $(document).ready(function (e) {
             pre_flag = 3;
             nex_flag = 0;
         }
-        console.log(nex_flag, pre_flag);
     });
     $(window).scroll(function () {
         var scrollPos = $(window).scrollTop();
