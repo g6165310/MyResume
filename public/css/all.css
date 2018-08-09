@@ -184,19 +184,23 @@ h2 {
 
 .nav {
   z-index: 100;
-  position: sticky-top;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #0487cc;
+  background-color: #0487cc;
+  color: red;
   font-family: "Oswald", "cwTeXYen", sans-serif;
   padding: 15px; }
   .nav li {
     width: 150px;
     text-align: center;
-    padding: 0 5px;
-    font-size: 20px; }
-    .nav li:hover {
-      border-left: 5px solid #0487cc;
-      border-right: 5px solid #0487cc; }
+    padding: 0px 5px;
+    font-size: 20px;
+    border-bottom: 3px solid transparent .nav li; }
+    .nav li :hover {
+      border-bottom: 3px solid #FFFFFF; }
+    .nav li a {
+      color: #FFFFFF; }
+
+.nav-active {
+  border-bottom: 3px solid #FFFFFF; }
 
 section {
   background-color: #E6E6E6;

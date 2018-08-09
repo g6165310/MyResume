@@ -58,25 +58,30 @@ h2{
 
 .nav{
     z-index: 100;
-    position: sticky-top;
-    //top:250px;
-    background-color: rgba(black,0.8);
-    color: $color-blue;
+    background-color: rgba($color-blue,1);
+    color: red;
     font-family: $font-family;
     padding: 15px;
     li{
         width: 150px;
 
         text-align: center;
-        padding: 0 5px;
+        padding: 0px 5px;
         font-size: 20px;
+        border-bottom: 3px solid transparent
         &:hover{
-        border-left: 5px solid $color-blue;
-        border-right: 5px solid $color-blue;
+        border-bottom: 3px solid $color-white;
         }
-    } 
-}
+        a{
+            color:$color-white;
+        }
+    }
 
+}
+    .nav-active{
+        border-bottom: 3px solid $color-white;
+        
+        }
 section{
     background-color: $color-grey;
     margin-top: 50px;

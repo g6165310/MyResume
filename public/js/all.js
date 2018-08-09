@@ -7,7 +7,9 @@ $(document).ready(function (e) {
         }, 1000);
     });
     $('.nav a').click(function () {
+        $('.nav a').removeClass('nav-active');
         var target = $(this).attr('href');
+        $(this).addClass('nav-active');
         var targetPos = $(target).offset().top;
         $('html, body').animate({
             scrollTop: targetPos - 50
