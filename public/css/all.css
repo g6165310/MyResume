@@ -183,15 +183,14 @@ h2 {
     font-weight: bold; }
 
 .nav {
-  position: fixed;
-  top: 250px;
-  background-color: transparent;
+  z-index: 100;
+  position: sticky-top;
+  background-color: rgba(0, 0, 0, 0.8);
   color: #0487cc;
   font-family: "Oswald", "cwTeXYen", sans-serif;
-  padding: 20px; }
+  padding: 15px; }
   .nav li {
-    margin-bottom: 20px;
-    width: 120px;
+    width: 150px;
     text-align: center;
     padding: 0 5px;
     font-size: 20px; }
@@ -394,9 +393,9 @@ section {
   border-radius: 0; }
 
 #slide1 {
-  -webkit-transform: translateX(0px) scale(1.5);
-      -ms-transform: translateX(0px) scale(1.5);
-          transform: translateX(0px) scale(1.5);
+  -webkit-transform: translateX(0px) scale(1.2);
+      -ms-transform: translateX(0px) scale(1.2);
+          transform: translateX(0px) scale(1.2);
   z-index: 99; }
 
 #slide2 {

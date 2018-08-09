@@ -57,15 +57,16 @@ h2{
 }
 
 .nav{
-    position: fixed;
-    top:250px;
-    background-color: transparent;
+    z-index: 100;
+    position: sticky-top;
+    //top:250px;
+    background-color: rgba(black,0.8);
     color: $color-blue;
     font-family: $font-family;
-    padding: 20px;
+    padding: 15px;
     li{
-        margin-bottom: 20px;
-        width: 120px;
+        width: 150px;
+
         text-align: center;
         padding: 0 5px;
         font-size: 20px;
@@ -284,7 +285,7 @@ section{
 }
 
 #slide1{
-    transform:translateX(0px) scale(1.5);
+    transform:translateX(0px) scale(1.2);
     z-index: 99;
 }
 

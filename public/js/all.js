@@ -33,7 +33,7 @@ $(document).ready(function (e) {
             $('#slide3').css("z-index", 9);
             $('#slide4').css("z-index", 9);
             $('#slide5').css("z-index", 9);
-            $('#slide1').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide1').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide2').css("transform", 'translateX(-300px) scale(1)');
             $('#slide3').css("transform", 'translateX(300px)');
             $('#slide4').css("transform", 'translateX(0px)');
@@ -46,7 +46,7 @@ $(document).ready(function (e) {
             $('#slide5').css("z-index", 9);
             $('#slide2').css("z-index", 9);
             $('#slide1').css("z-index", 9);
-            $('#slide3').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide3').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide4').css("transform", 'translateX(300px)');
             $('#slide5').css("transform", 'translateX(0px)');
             $('#slide1').css("transform", 'translateX(-300px) scale(1)');
@@ -59,7 +59,7 @@ $(document).ready(function (e) {
             $('#slide3').css("z-index", 9);
             $('#slide2').css("z-index", 9);
             $('#slide1').css("z-index", 9);
-            $('#slide4').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide4').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide3').css("transform", 'translateX(-300px) scale(1)');
             $('#slide5').css("transform", 'translateX(300px)');
             $('#slide2').css("transform", 'translateX(0px)');
@@ -72,7 +72,7 @@ $(document).ready(function (e) {
             $('#slide2').css("z-index", 9);
             $('#slide3').css("z-index", 9);
             $('#slide1').css("z-index", 9);
-            $('#slide5').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide5').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide4').css("transform", 'translateX(-300px) scale(1)');
             $('#slide3').css("transform", 'translateX(0px)');
             $('#slide2').css("transform", 'translateX(300px)');
@@ -85,7 +85,7 @@ $(document).ready(function (e) {
             $('#slide5').css("z-index", 9);
             $('#slide3').css("z-index", 9);
             $('#slide1').css("z-index", 9);
-            $('#slide2').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide2').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide5').css("transform", 'translateX(-300px) scale(1)');
             $('#slide4').css("transform", 'translateX(0px)');
             $('#slide3').css("transform", 'translateX(0px)');
@@ -102,7 +102,7 @@ $(document).ready(function (e) {
             $('#slide3').css("z-index", 9);
             $('#slide4').css("z-index", 9);
             $('#slide5').css("z-index", 9);
-            $('#slide1').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide1').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide2').css("transform", 'translateX(-300px)');
             $('#slide3').css("transform", 'translateX(300px) scale(1)');
             $('#slide4').css("transform", 'translateX(0px)');
@@ -115,7 +115,7 @@ $(document).ready(function (e) {
             $('#slide4').css("z-index", 9);
             $('#slide3').css("z-index", 9);
             $('#slide1').css("z-index", 9);
-            $('#slide2').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide2').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide5').css("transform", 'translateX(-300px)');
             $('#slide4').css("transform", 'translateX(0px)');
             $('#slide3').css("transform", 'translateX(0px)');
@@ -128,7 +128,7 @@ $(document).ready(function (e) {
             $('#slide3').css("z-index", 9);
             $('#slide1').css("z-index", 9);
             $('#slide2').css("z-index", 9);
-            $('#slide5').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide5').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide4').css("transform", 'translateX(-300px)');
             $('#slide3').css("transform", 'translateX(0px)');
             $('#slide1').css("transform", 'translateX(0px)');
@@ -141,7 +141,7 @@ $(document).ready(function (e) {
             $('#slide1').css("z-index", 9);
             $('#slide2').css("z-index", 9);
             $('#slide5').css("z-index", 9);
-            $('#slide4').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide4').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide3').css("transform", 'translateX(-300px)');
             $('#slide1').css("transform", 'translateX(0px)');
             $('#slide2').css("transform", 'translateX(0px)');
@@ -154,7 +154,7 @@ $(document).ready(function (e) {
             $('#slide2').css("z-index", 9);
             $('#slide5').css("z-index", 9);
             $('#slide4').css("z-index", 9);
-            $('#slide3').css("transform", 'translateX(0px) scale(1.5)');
+            $('#slide3').css("transform", 'translateX(0px) scale(1.2)');
             $('#slide1').css("transform", 'translateX(-300px)');
             $('#slide2').css("transform", 'translateX(0px)');
             $('#slide5').css("transform", 'translateX(0px)');
