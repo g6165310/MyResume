@@ -1,17 +1,34 @@
 $(document).ready(function(e){
+    $('.section-slider').slick({
+        dots: true,
+        infinite: true,
+        arrows:false,
+      });
+
+    $('.showmenu').on('click',function(e){
+        e.preventDefault();
+        $('.menu').toggleClass('menu-show');
+    })
     $('.scroll-top').click(function(){
         $('html, body').animate({
             scrollTop: 0
         },1000)
     })
-    $('.nav a').click(function(){
+    $('.nav li a').click(function(){
         $('.nav a').removeClass('nav-active');
         var target=$(this).attr('href');   
         $(this).addClass('nav-active');
-        var targetPos = $(target).offset().top;
+        console.log(target);
+        console.log($(target).hasClass('fadeIn'))
+        if($(target).hasClass('fadeIn')){
+            var targetPos = $(target).offset().top+100;
+        }else{
+            var targetPos = $(target).offset().top;
+        }
         $('html, body').animate({
-            scrollTop: targetPos-50
+            scrollTop: targetPos-150
         },800)
+        $('.menu').removeClass('menu-show');
     })
     $('.event-img').hover(function(){
         $(this).siblings().animate({
@@ -23,146 +40,7 @@ $(document).ready(function(e){
         opacity:0
         },500)
     })
-    let nex_flag=1;
-    let pre_flag=1;
-    //btn-nex
-    $('.nex').click(function () {
-        if (nex_flag == 0) {
-            $('#slide1').css("z-index", 999);
-            $('#slide2').css("z-index", 9);
-            $('#slide3').css("z-index", 9);
-            $('#slide4').css("z-index", 9);
-            $('#slide5').css("z-index", 9);
-            $('#slide1').css("transform", 'translateX(0px) scale(1.2)');
-            $('#slide2').css("transform", 'translateX(-300px) scale(1)');
-            $('#slide3').css("transform", 'translateX(300px)');
-            $('#slide4').css("transform", 'translateX(0px)');
-            $('#slide5').css("transform", 'translateX(0px)');
-            nex_flag = 1;
-            pre_flag = 1;
-        } else if (nex_flag == 1) {
-            $('#slide3').css("z-index", 999);
-            $('#slide4').css("z-index", 9);
-            $('#slide5').css("z-index", 9);
-            $('#slide2').css("z-index", 9);
-            $('#slide1').css("z-index", 9);
-            $('#slide3').css("transform", 'translateX(0px) scale(1.2)');
-            $('#slide4').css("transform", 'translateX(300px)');
-            $('#slide5').css("transform", 'translateX(0px)');
-            $('#slide1').css("transform", 'translateX(-300px) scale(1)');
-            $('#slide2').css("transform", 'translateX(0px)');
-            nex_flag = 3;
-            pre_flag = 3;
-        } else if (nex_flag == 3) {
-            $('#slide4').css("z-index", 999);
-            $('#slide5').css("z-index", 9);
-            $('#slide3').css("z-index", 9);
-            $('#slide2').css("z-index", 9);
-            $('#slide1').css("z-index", 9);
-            $('#slide4').css("transform", 'translateX(0px) scale(1.2)');
-            $('#slide3').css("transform", 'translateX(-300px) scale(1)');
-            $('#slide5').css("transform", 'translateX(300px)');
-            $('#slide2').css("transform", 'translateX(0px)');
-            $('#slide1').css("transform", 'translateX(0px)');
-            nex_flag = 5;
-            pre_flag = 2;
-        } else if (nex_flag == 5) {
-            $('#slide5').css("z-index", 999);
-            $('#slide4').css("z-index", 9);
-            $('#slide2').css("z-index", 9);
-            $('#slide3').css("z-index", 9);
-            $('#slide1').css("z-index", 9);
-            $('#slide5').css("transform", 'translateX(0px) scale(1.2)');
-            $('#slide4').css("transform", 'translateX(-300px) scale(1)');
-            $('#slide3').css("transform", 'translateX(0px)');
-            $('#slide2').css("transform", 'translateX(300px)');
-            $('#slide1').css("transform", 'translateX(0px)');
-            nex_flag = 2;
-            pre_flag = 0;
-        } else if (nex_flag == 2) {
-            $('#slide2').css("z-index", 999);
-            $('#slide4').css("z-index", 9);
-            $('#slide5').css("z-index", 9);
-            $('#slide3').css("z-index", 9);
-            $('#slide1').css("z-index", 9);
-            $('#slide2').css("transform", 'translateX(0px) scale(1.2)');
-            $('#slide5').css("transform", 'translateX(-300px) scale(1)');
-            $('#slide4').css("transform", 'translateX(0px)');
-            $('#slide3').css("transform", 'translateX(0px)');
-            $('#slide1').css("transform", 'translateX(300px)');
-            nex_flag = 0;
-            pre_flag = 5;
-        }
-    });
-    //pre-btn
-    $('.pre').click(function(){
-        if(pre_flag==3){
-            $('#slide1').css("z-index",999);
-            $('#slide2').css("z-index",9);
-            $('#slide3').css("z-index",9);
-            $('#slide4').css("z-index",9);
-            $('#slide5').css("z-index",9);
-            $('#slide1').css("transform",'translateX(0px) scale(1.2)');
-            $('#slide2').css("transform",'translateX(-300px)');
-            $('#slide3').css("transform",'translateX(300px) scale(1)');
-            $('#slide4').css("transform",'translateX(0px)');
-            $('#slide5').css("transform",'translateX(0px)');
-            pre_flag=1;
-            nex_flag=1;
-        }else if(pre_flag==1){
-            $('#slide2').css("z-index",999);
-            $('#slide5').css("z-index",9);
-            $('#slide4').css("z-index",9);
-            $('#slide3').css("z-index",9);
-            $('#slide1').css("z-index",9);
-            $('#slide2').css("transform",'translateX(0px) scale(1.2)');
-            $('#slide5').css("transform",'translateX(-300px)');
-            $('#slide4').css("transform",'translateX(0px)');
-            $('#slide3').css("transform",'translateX(0px)');
-            $('#slide1').css("transform",'translateX(300px) scale(1)');
-            pre_flag = 5;
-            nex_flag = 0;
-        }else if(pre_flag==5){
-            $('#slide5').css("z-index",999);
-            $('#slide4').css("z-index",9);
-            $('#slide3').css("z-index",9);
-            $('#slide1').css("z-index",9);
-            $('#slide2').css("z-index",9);
-            $('#slide5').css("transform",'translateX(0px) scale(1.2)');
-            $('#slide4').css("transform",'translateX(-300px)');
-            $('#slide3').css("transform",'translateX(0px)');
-            $('#slide1').css("transform",'translateX(0px)');
-            $('#slide2').css("transform",'translateX(300px) scale(1)');
-            pre_flag = 0;
-            nex_flag = 2;
-        }else if(pre_flag==0){
-            $('#slide4').css("z-index",999);
-            $('#slide3').css("z-index",9);
-            $('#slide1').css("z-index",9);
-            $('#slide2').css("z-index",9);
-            $('#slide5').css("z-index",9);
-            $('#slide4').css("transform",'translateX(0px) scale(1.2)');
-            $('#slide3').css("transform",'translateX(-300px)');
-            $('#slide1').css("transform",'translateX(0px)');
-            $('#slide2').css("transform",'translateX(0px)');
-            $('#slide5').css("transform",'translateX(300px) scale(1)');
-            pre_flag = 2;
-            nex_flag = 5;
-        }else if(pre_flag==2){
-            $('#slide3').css("z-index",999);
-            $('#slide1').css("z-index",9);
-            $('#slide2').css("z-index",9);
-            $('#slide5').css("z-index",9);
-            $('#slide4').css("z-index",9);
-            $('#slide3').css("transform",'translateX(0px) scale(1.2)');
-            $('#slide1').css("transform",'translateX(-300px)');
-            $('#slide2').css("transform",'translateX(0px)');
-            $('#slide5').css("transform",'translateX(0px)');
-            $('#slide4').css("transform",'translateX(300px) scale(1)');
-            pre_flag = 3;
-            nex_flag = 0;
-        }
-    })
+
     $(window).scroll(function(){
         var scrollPos = $(window).scrollTop();
         var windowHeight = $(window).height();
@@ -177,6 +55,27 @@ $(document).ready(function(e){
                 $(this).addClass('fadeIn')
             }
         })
+        console.log(scrollPos)
+        if(scrollPos<489){
+            $('.nav a').removeClass('nav-active');
+            $('.menu .about a').addClass('nav-active');
+        }
+        if(scrollPos>=489){
+            $('.nav a').removeClass('nav-active');
+            $('.menu .skill a').addClass('nav-active');
+        } 
+        if(scrollPos>=1065){
+            $('.nav a').removeClass('nav-active');
+            $('.menu .experience a').addClass('nav-active');
+        }
+        if(scrollPos>=2012){
+            $('.nav a').removeClass('nav-active');
+            $('.menu .event a').addClass('nav-active');
+        }
+        if(scrollPos>=2553){
+            $('.nav a').removeClass('nav-active');
+            $('.menu .portfolio a').addClass('nav-active');
+        }
     })
     
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -192,13 +91,14 @@ $(document).ready(function(e){
             }]
         },
         options: {
+            maintainAspectRatio: false,
             scale: {
                 ticks: {
                     beginAtZero: true,
                     max: 100
                 },
                 pointLabels: {
-                    fontSize: 20,
+                    fontSize: 15,
                 }
             }
         }

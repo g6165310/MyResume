@@ -7,11 +7,14 @@ html(lang="en")
         title MyResume
         link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css')
         link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/all.css', integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt', crossorigin='anonymous')
+        link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
         link(rel="stylesheet", href="css/all.css")
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js')
+        script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
         script(src="js/all.js")
 
     body
@@ -19,21 +22,22 @@ html(lang="en")
             i.fas.fa-arrow-up
     .nav.sticky-top
         ul.menu.mx-auto
-            li.float-left
-                a(href="#about") ABOUT
-            li.float-left
+            li.about
+                a(href="#about" class='nav-active') ABOUT
+            li.skill
                 a(href="#skill") SKILL
-            li.float-left
+            li.experience
                 a(href="#experience") EXPERIENCE
-            li.float-left
+            li.event
                 a(href="#event") EVENT
-            li.float-left
+            li.portfolio
                 a(href="#portfolio") PORTFOLIO
+        a.text-white(href='#' class="showmenu ") menu
     .container
         section#about
             .profile
                 .row
-                    .col-4
+                    .col-md-4
                         #personal-photo.mb-3
                             img(src="img/profile-photo.jpg", alt="")
                         #scoial
@@ -44,9 +48,10 @@ html(lang="en")
                                 li
                                     a(href="#")
                                         i.fab.fa-github.fa-2x
-                    #info.col-8
-                        h2.mb-1 何宗益 Gary
-                        span.mb-4 目前正積極精進前端開發的能力，期望能成為一位能獨當一面的前端工程師
+                    #info.col-md-8
+                        div#info-name
+                            h2.mb-1 何宗益 Gary
+                            span.mb-4 目前正積極精進前端開發的能力，期望能成為一位能獨當一面的前端工程師
                         p 在大學期間首次接觸到前端的語言，包括HTML、CSS、JavaScript等，發覺前端真的很有趣，應用的範圍也很廣泛，可以寫網頁、應用程式、遊戲等，甚至最近很紅的區塊鏈也能透過前端來開發。目前正透過自我學習的方式來加強自己在前端開發的能力，並期許自己將來能夠成為解決各式問題的前端工程師。
                         .row
                             .col-6
@@ -69,13 +74,14 @@ html(lang="en")
             .section-header
                 h2 SKILL
             .row
-                .col-5
+                .col-md-5.mb-5
                     #professional-skills
                         .skills-title
                             h3 PROFESSIONAL SKILLS
                         .professional-skills-content
-                            canvas#myChart(height="200")
-                .col-7
+                            .chart-container
+                                canvas#myChart
+                .col-md-7
                     #additional-skills
                         .skills-title
                             h3 ADDITIONAL SKILLS
@@ -90,8 +96,7 @@ html(lang="en")
                             .additional-skills-content.bottom.row
                                 .col-4 
                                     span 中文
-                                    span 英文TOEIC 765
-                                    span 韓文(自學中)
+                                    span TOEIC 765
                                 .col-4
                                     span Facebook AD
                                     span Google Analytics
@@ -103,7 +108,7 @@ html(lang="en")
             .section-header
                 h2 EXPERIENCE
             .row
-                .col-10.offset-1
+                .col-lg-10.offset-lg-2
                     span.experience-icon
                         i.fas.fa-code.fa-1x
                     ul.experience-list
@@ -126,59 +131,36 @@ html(lang="en")
             .section-header
                 h2 EVENT
             .row
-                .col-6
+                .col-lg-6
                     .event-img
                         img(src="img/event-1.jpg", alt="")
                     .event-content
                         p 由於C語言是大學所學的第一門程式課程，為了打好程式基礎，與幾位同學一起創建C語言教室，主要為輔導與解惑學弟妹在C語言課業上遇到的困難。從活動中擔任小老師的身份，不僅讓自己有更多的學習機會，更能審視自己過去所學並融會貫通。
-                .col-6
+                .col-lg-6
                     .event-img
                         img(src="img/event-2.jpg", alt="")
                     .event-content
                         p 藉由營隊一系列活動以及課程，讓高中生更了解資訊管理學系在學些什麼。過程中，不僅提出活動以及課程企劃，更要利用各種行銷管道進行招生，藉此完成這項活動。身為總召，面對數個部門的不同狀況和壓力，讓我學習到如何扮演好一個領導人的腳色，也讓自己有更多的機會學習如何統整、運用來自四方八方的訊息，並協調各部門的工作以及人力，讓活動的品質更好。
         section#portfolio.mb-2.animated.mb-5
             .section-header
-                h2 PORTFOLIO 
-            .row.slide-wrap
-                .btn.pre
-                    i.fas.fa-angle-left
-                #slide1.card
+                h2 PORTFOLIO
+            .section-slider
+                div
                     .card-img
-                        img(src="img/slide-1.png", alt="")
+                        img(src="img/slide-5.png", alt="")
                     .card-content
-                        h3 產學合作-TagKnowledge
+                        h3 獨立音樂資訊
                         i.far.fa-clock 
-                            span.ml-1 2015/05 - 2016/12
-                        p 畢業專題因為是產學合作，因此與合雅行銷公司有了一年的合作機會，我們開發了一款透過遊戲來交友的Android App，而後端的部分更是利用Hadoop建立主機叢集，讓公司能輕易處理大量資料。
-                        .bage-container.mt-2
-                            span.badge.badge-info.mr-1 Android開發
-                #slide2.card 
-                    .card-img
-                        img(src="img/slide-2.png", alt="")
-                    .card-content
-                        h3 趣活動
-                        i.far.fa-clock 
-                            span.ml-1 2016/03 - 2016/06
-                        p 利用文化部提供的開放資料，結合Google Map API呈現在地圖上，同時也連結了Google Calendar讓使用者可以一鍵記錄到個人的日曆當中。
-                        .bage-container.mt-2
-                            span.badge.badge-info.mr-1 HTNL
-                            span.badge.badge-info.mr-1 CSS/SCSS
-                            span.badge.badge-info.mr-1 JavaScript
-                            span.badge.badge-info.mr-1 JSON資料處理 
-                #slide3.card 
-                    .card-img
-                        img(src="img/slide-3.png", alt="")
-                    .card-content
-                        h3 Snapost
-                        i.far.fa-clock 
-                            span.ml-1 2016/10 - 2017/01
-                        p 利用JavaScript和Firebase建立起一個模仿IG的社交網站，利用Facebook API 驗證使用者的登入，並模擬廣告主投放廣告的實作，同時利用D3.js自動生成廣告成效報表等。
-                        .bage-container.mt-2
-                            span.badge.badge-info.mr-1 HTNL
-                            span.badge.badge-info.mr-1 CSS/SCSS
-                            span.badge.badge-info.mr-1 JavaScript
-                            span.badge.badge-info.mr-1 D3.js
-                #slide4.card 
+                            span.ml-1 2018/08
+                        p 結合政府OpenData以及GoogleMap API，建立一個以Vue,js開發的獨立音樂演出的資訊平台，並利用localstorage實作加入最愛的功能。
+                        a(href='https://g6165310.github.io/MusicOpenApi/' target='_blank') 獨立音樂資訊網站
+                        .bage-container.mt-3
+                            span.badge.badge-info.mr-1 Vue
+                            span.badge.badge-info.mr-1 Bootstrap
+                            span.badge.badge-info.mr-1 OpenData API
+                            span.badge.badge-info.mr-1 GoogleMap API
+                            span.badge.badge-info.mr-1 LocalStorage
+                div 
                     .card-img
                         img(src="img/slide-4.png", alt="")
                     .card-content
@@ -193,22 +175,41 @@ html(lang="en")
                             span.badge.badge-info.mr-1 CSS/SCSS
                             span.badge.badge-info.mr-1 Bootstrap
                             span.badge.badge-info.mr-1 RWD
-                #slide5.card 
+                div 
                     .card-img
-                        img(src="img/slide-5.png", alt="")
+                        img(src="img/slide-3.png", alt="")
                     .card-content
-                        h3 獨立音樂資訊
+                        h3 Snapost
                         i.far.fa-clock 
-                            span.ml-1 2018/08
-                        p 結合政府OpenData以及GoogleMap API，建立一個以Vue,js開發的獨立音樂演出的資訊平台。
-                        a(href='https://g6165310.github.io/MusicOpenApi/' target='_blank') 獨立音樂資訊網站
-                        .bage-container.mt-3
-                            span.badge.badge-info.mr-1 Vue
-                            span.badge.badge-info.mr-1 Bootstrap
-                            span.badge.badge-info.mr-1 OpenData API
-                            span.badge.badge-info.mr-1 GoogleMap API
-
-                .btn.nex
-                    i.fas.fa-angle-right
+                            span.ml-1 2016/10 - 2017/01
+                        p 利用JavaScript和Firebase建立起一個模仿IG的社交網站，利用Facebook API 驗證使用者的登入，並模擬廣告主投放廣告的實作，同時利用D3.js生成相關成效報表等。
+                        .bage-container.mt-2
+                            span.badge.badge-info.mr-1 HTNL
+                            span.badge.badge-info.mr-1 CSS
+                            span.badge.badge-info.mr-1 JavaScript
+                            span.badge.badge-info.mr-1 D3.js
+                div 
+                    .card-img
+                        img(src="img/slide-2.png", alt="")
+                    .card-content
+                        h3 趣活動
+                        i.far.fa-clock 
+                            span.ml-1 2016/03 - 2016/06
+                        p 利用文化部提供的開放資料，結合Google Map API呈現在地圖上，同時也連結了Google Calendar讓使用者可以一鍵記錄到個人的日曆當中。
+                        .bage-container.mt-2
+                            span.badge.badge-info.mr-1 HTNL
+                            span.badge.badge-info.mr-1 CSS/SCSS
+                            span.badge.badge-info.mr-1 JavaScript
+                            span.badge.badge-info.mr-1 JSON資料處理
+                div
+                    .card-img
+                        img(src="img/slide-1.png", alt="")
+                    .card-content
+                        h3 產學合作-TagKnowledge
+                        i.far.fa-clock 
+                            span.ml-1 2015/05 - 2016/12
+                        p 畢業專題因為是產學合作，因此與合雅行銷公司有了一年的合作機會，我們開發了一款透過遊戲來交友的Android App，而後端的部分更是利用Hadoop建立主機叢集，讓公司能輕易處理大量資料。
+                        .bage-container.mt-2
+                            span.badge.badge-info.mr-1 Android開發
         .footer.mb-3
             p Copyright © 2018 何宗益 All rights reserved
