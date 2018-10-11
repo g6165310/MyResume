@@ -18,8 +18,6 @@ $(document).ready(function(e){
         $('.nav a').removeClass('nav-active');
         var target=$(this).attr('href');   
         $(this).addClass('nav-active');
-        console.log(target);
-        console.log($(target).hasClass('fadeIn'))
         if($(target).hasClass('fadeIn')){
             var targetPos = $(target).offset().top+100;
         }else{
@@ -55,7 +53,6 @@ $(document).ready(function(e){
                 $(this).addClass('fadeIn')
             }
         })
-        console.log(scrollPos)
         if(scrollPos<489){
             $('.nav a').removeClass('nav-active');
             $('.menu .about a').addClass('nav-active');
