@@ -252,7 +252,8 @@ section {
   margin-top: 50px;
   font-family: "Oswald", "cwTeXYen", sans-serif; }
   section p {
-    line-height: 150%; }
+    line-height: 150%;
+    font-size: 20px; }
 
 #about {
   background-color: #FFFFFF;
