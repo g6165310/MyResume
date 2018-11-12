@@ -78,22 +78,36 @@ html(lang="en")
                     #professional-skills
                         .skills-title
                             h3 PROFESSIONAL SKILLS
-                        .professional-skills-content
-                            .chart-container
-                                canvas#myChart
+                        .additional-skills-content
+                            .skills-content.top.row
+                                .col-6 
+                                    span 前端
+                                .col-6 
+                                    span 後端
+                            .skills-content.bottom.row
+                                .col-6
+                                    span React
+                                    span Vue
+                                    span JavaScript
+                                    span HTML
+                                    span CSS
+                                .col-6
+                                    span Java
+                                    span PHP
+                                    span Python
                 .col-md-7
                     #additional-skills
                         .skills-title
                             h3 ADDITIONAL SKILLS
-                        .additional-skills-content
-                            .additional-skills-content.top.row
+                        .skills-content
+                            .skills-content.top.row
                                 .col-4 
                                     span Language
                                 .col-4 
                                     span Tool
                                 .col-4 
                                     span Other
-                            .additional-skills-content.bottom.row
+                            .skills-content.bottom.row
                                 .col-4 
                                     span 中文
                                     span TOEIC 765
@@ -147,6 +161,19 @@ html(lang="en")
             .section-slider
                 div
                     .card-img
+                        img(src="img/slide-6.png", alt="")
+                    .card-content
+                        h3 Mini TV
+                        i.far.fa-clock 
+                            span.ml-1 2018/09 - 2018/10
+                        p 使用react框架搭配Firebase實作由Server Side Rendering 的影音平台，分為前台以及後台影片上架的功能，且透過redux進行資料狀態的管理。
+                        a(href='https://fast-lowlands-98320.herokuapp.com/' target='_blank') Mini TV
+                        .bage-container.mt-3
+                            span.badge.badge-info.mr-1 React
+                            span.badge.badge-info.mr-1 Firebase
+                            span.badge.badge-info.mr-1 webpack
+                div
+                    .card-img
                         img(src="img/slide-5.png", alt="")
                     .card-content
                         h3 獨立音樂資訊
@@ -171,7 +198,7 @@ html(lang="en")
                         a.mr-1(href='https://g6165310.github.io/RWD_practice/' target='_blank') 切版練習1
                         a(href='https://g6165310.github.io/Bootstrap_practice/index2' target='_blank') 切版練習2
                         .bage-container.mt-3
-                            span.badge.badge-info.mr-1 HTNL
+                            span.badge.badge-info.mr-1 HTML
                             span.badge.badge-info.mr-1 CSS/SCSS
                             span.badge.badge-info.mr-1 Bootstrap
                             span.badge.badge-info.mr-1 RWD
@@ -184,7 +211,7 @@ html(lang="en")
                             span.ml-1 2016/10 - 2017/01
                         p 利用JavaScript和Firebase建立起一個模仿IG的社交網站，利用Facebook API 驗證使用者的登入，並模擬廣告主投放廣告的實作，同時利用D3.js生成相關成效報表等。
                         .bage-container.mt-2
-                            span.badge.badge-info.mr-1 HTNL
+                            span.badge.badge-info.mr-1 HTML
                             span.badge.badge-info.mr-1 CSS
                             span.badge.badge-info.mr-1 JavaScript
                             span.badge.badge-info.mr-1 D3.js
@@ -197,7 +224,7 @@ html(lang="en")
                             span.ml-1 2016/03 - 2016/06
                         p 利用文化部提供的開放資料，結合Google Map API呈現在地圖上，同時也連結了Google Calendar讓使用者可以一鍵記錄到個人的日曆當中。
                         .bage-container.mt-2
-                            span.badge.badge-info.mr-1 HTNL
+                            span.badge.badge-info.mr-1 HTML
                             span.badge.badge-info.mr-1 CSS/SCSS
                             span.badge.badge-info.mr-1 JavaScript
                             span.badge.badge-info.mr-1 JSON資料處理
