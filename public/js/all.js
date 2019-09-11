@@ -25,6 +25,7 @@ $(document).ready(function (e) {
         } else {
             var targetPos = $(target).offset().top;
         }
+        console.log(targetPos);
         $('html, body').animate({
             scrollTop: targetPos - 150
         }, 800);
@@ -55,51 +56,26 @@ $(document).ready(function (e) {
                 $(this).addClass('fadeIn');
             }
         });
-        if (scrollPos < 489) {
+        console.log(scrollPos);
+        if (scrollPos < 488) {
             $('.nav a').removeClass('nav-active');
             $('.menu .about a').addClass('nav-active');
         }
-        if (scrollPos >= 489) {
+        if (scrollPos >= 488) {
             $('.nav a').removeClass('nav-active');
             $('.menu .skill a').addClass('nav-active');
         }
-        if (scrollPos >= 1065) {
+        if (scrollPos >= 1064) {
             $('.nav a').removeClass('nav-active');
             $('.menu .experience a').addClass('nav-active');
         }
-        if (scrollPos >= 2012) {
+        if (scrollPos >= 2011) {
             $('.nav a').removeClass('nav-active');
             $('.menu .event a').addClass('nav-active');
         }
-        if (scrollPos >= 2553) {
+        if (scrollPos >= 2552) {
             $('.nav a').removeClass('nav-active');
             $('.menu .portfolio a').addClass('nav-active');
-        }
-    });
-
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        type: 'radar',
-        data: {
-            labels: ["HTML", "CSS/SCSS", "JavaScript", 'Vue', "Python", "Java", "PHP"],
-            datasets: [{
-                label: "skill",
-                backgroundColor: 'rgb(4, 135, 204,0.1)',
-                borderColor: 'rgb(4, 135, 204)',
-                data: [75, 70, 65, 50, 45, 60, 45]
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            scale: {
-                ticks: {
-                    beginAtZero: true,
-                    max: 100
-                },
-                pointLabels: {
-                    fontSize: 15
-                }
-            }
         }
     });
 });

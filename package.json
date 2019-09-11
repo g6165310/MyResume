@@ -21,6 +21,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "main-bower-files": "^2.13.1"
+    "main-bower-files": "^2.13.1",
+    "natives": "^1.1.6"
   }
 }
